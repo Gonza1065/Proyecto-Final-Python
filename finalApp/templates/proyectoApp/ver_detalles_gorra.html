@@ -1,0 +1,10 @@
+{% extends "proyectoApp/base.html" %}
+{% load static %}
+{% block ver_detalles_gorra %}
+  <h1>Detalles de la Gorra: {{ gorra.nombre }}</h1>
+  <div class="gorra-details">
+    <img src="/media/{{ gorra.imagen }} " alt="{{ gorra.nombre }}" width="300">
+    <p><strong>Descripción:</strong> {{ gorra.descripcion }}</p>
+  </div>
+  <a href="{% url 'gorras' %}">Volver a la lista de gorras</a>
+{% endblock %}

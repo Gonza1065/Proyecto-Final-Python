@@ -1,0 +1,21 @@
+{% extends "proyectoApp/base.html" %} {% load static %} {% block gorras %}
+<div class="gorras-disponibles">
+  <h1>Gorras Disponibles</h1>
+</div>
+<ul class="gorras">
+  {% for gorra in gorras %}
+  <li>
+    <h2>{{ gorra.nombre }}</h2>
+    <img
+      src="/media/{{ gorra.imagen }} "
+      alt="{{ gorra.nombre }}"
+      width="200"
+    />
+    <a href="{% url 'ver_detalles_gorra' gorra.id %}" class="ver-detalles">Ver detalles</a>
+  </li>
+  {% empty %}
+  <p>No hay gorras disponibles.</p>
+  {% endfor %}
+</ul>
+
+{% endblock %}

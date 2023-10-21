@@ -1,0 +1,15 @@
+.gorras-disponibles {
+  display: flex;
+  justify-content: center;
+}
+.gorras {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  text-align: center;
+}
+.gorras li {
+  list-style: none;
+}
+.ver-detalles {
+  color: white;
+}

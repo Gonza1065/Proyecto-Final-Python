@@ -1,0 +1,22 @@
+{% extends "proyectoApp/base.html" %} 
+{% load static %} 
+{% block remeras %}
+<h1>Remeras Disponibles</h1>
+
+<ul class="remeras">
+  {% for remera in remeras %}
+  <li>
+    <h2>{{ remera.nombre }}</h2>
+    <img
+      src="/media/{{ remera.imagen }} "
+      alt="{{ remera.nombre }}"
+      width="200"
+    />
+    <a href="{% url 'ver_detalles_remera' remera.id %}">Ver detalles</a>
+  </li>
+  {% empty %}
+  <p>No hay remeras disponibles.</p>
+  {% endfor %}
+</ul>
+
+{% endblock %}

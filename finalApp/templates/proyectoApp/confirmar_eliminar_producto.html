@@ -1,0 +1,12 @@
+{% extends "proyectoApp/base.html" %}
+
+{% block confirmar_eliminar_producto %}
+  <h1>Confirmar Eliminación</h1>
+  <p>¿Estás seguro de que deseas eliminar el producto "{{ producto.nombre }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar producto</button>
+  </form>
+  <a href="{% url 'mis_productos' %}">Cancelar</a>
+</div>
+{% endblock %}

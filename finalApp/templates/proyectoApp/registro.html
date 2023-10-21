@@ -1,0 +1,17 @@
+{% extends "proyectoApp/base.html" %} {% load static %} {% block signup %}
+<section class="section-registro">
+  <h2 class="titulo">Registrate</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="formulario">{{ form.as_p }}</div>
+    <div class="registrarse">
+      <button type="submit">Registrarse</button>
+    </div>
+  </form>
+  <div>
+    <p class="inicia-sesion-aqui">
+      <a href="{% url 'login' %}">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+    </p>
+  </div>
+</section>
+{% endblock %}

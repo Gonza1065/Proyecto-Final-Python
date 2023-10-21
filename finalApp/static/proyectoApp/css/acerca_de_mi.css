@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+.titulo-acerca-de-mi {
+  text-align: center;
+  text-decoration: underline;
+}
+.foto-mia img {
+  align-items: center;
+  height: 400px;
+}
+.contenido-acerca-de-mi {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-left: 80px;
+  margin-right: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(240, 248, 255, 0.596);
+}
+.contenido-acerca-de-mi h4 {
+  line-height: 25px;
+}
+.A {
+  color: bisque;
+}
+.iniciales {
+  color: rgb(252, 183, 99);
+}
+.tecnologias {
+  color: beige;
+  text-decoration: underline;
+}
+.mi-nombre {
+  color: rgb(252, 183, 99);
+}

@@ -1,0 +1,15 @@
+{% extends "proyectoApp/base.html" %} {% block login %}
+<div class="iniciar-sesion">
+  <h2>Iniciar sesión</h2>
+</div>
+<form method="post" class="formulario">
+  {% csrf_token %} {{ form.as_p }}
+
+  <button type="submit">Iniciar sesión</button>
+</form>
+<div>
+  <p class="registrate-aqui">
+    <a href="{% url 'signup' %}">¿No tienes una cuenta? Regístrate aquí</a>
+  </p>
+</div>
+{% endblock %}

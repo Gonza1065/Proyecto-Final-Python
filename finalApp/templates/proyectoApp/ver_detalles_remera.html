@@ -1,0 +1,11 @@
+{% extends "proyectoApp/base.html" %}
+{% load static %}
+{% block ver_detalles_remera %}
+  <h1>Detalles de la Remera: {{ remera.nombre }}</h1>
+  <div class="remera-details">
+    <img src="/media/{{ remera.imagen }} " alt="{{ remera.nombre }}" width="300">
+    <p><strong>Descripción:</strong> {{ remera.descripcion }}</p>
+    <!-- Agrega aquí más detalles específicos de la gorra si los tienes -->
+  </div>
+  <a href="{% url 'remeras' %}">Volver a la lista de remeras</a>
+{% endblock %}

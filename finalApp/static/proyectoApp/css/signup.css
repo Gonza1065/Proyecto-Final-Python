@@ -1,0 +1,32 @@
+.titulo {
+  text-align: center;
+}
+.formulario {
+  text-align: center;
+}
+.formulario p .helptext {
+  display: none;
+}
+/* .formulario ul li {
+  display: none;
+} */
+.formulario ul li {
+  list-style: none;
+}
+.registrarse {
+  text-align: center;
+}
+.registrarse button {
+  cursor: pointer;
+  font-size: 15px;
+  background-color: rgb(255, 181, 92);
+  border-style: none;
+  padding: 5px;
+}
+.registrarse button:hover {
+  background-color: rgb(255, 140, 0);
+  transition: 0.5s;
+}
+.inicia-sesion-aqui {
+  text-align: center;
+}

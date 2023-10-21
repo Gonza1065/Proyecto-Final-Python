@@ -1,0 +1,22 @@
+{% extends "proyectoApp/base.html" %} 
+{% load static %} 
+{% block pantalones %}
+<h1>Pantalones Disponibles</h1>
+
+<ul class="pantalones">
+  {% for pantalon in pantalones %}
+  <li>
+    <h2>{{ pantalon.nombre }}</h2>
+    <img
+      src="/media/{{ pantalon.imagen }} "
+      alt="{{ pantalon.nombre }}"
+      width="200"
+    />
+    <a href="{% url 'ver_detalles_pantalon' pantalon.id %}">Ver detalles</a>
+  </li>
+  {% empty %}
+  <p>No hay pantalones disponibles.</p>
+  {% endfor %}
+</ul>
+
+{% endblock %}

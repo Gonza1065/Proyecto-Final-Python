@@ -1,0 +1,13 @@
+.navegacion {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.navegacion li {
+  padding: 10px;
+  list-style: none;
+  color: white;
+}
+.navegacion li a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

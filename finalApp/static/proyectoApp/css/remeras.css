@@ -1,0 +1,8 @@
+.remeras {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  text-align: center;
+}
+.remeras li {
+  list-style: none;
+}

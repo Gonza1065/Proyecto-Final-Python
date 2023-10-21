@@ -1,0 +1,35 @@
+a {
+  color: white;
+  text-align: center;
+}
+.crear-producto a {
+  color: white;
+  text-align: center;
+}
+.ver-prendas-publicadas {
+  line-height: 50px;
+  text-align: center;
+}
+.titulo-crear-producto {
+  text-align: center;
+  text-decoration: underline;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.boton-crear-producto button {
+  border-style: none;
+  padding: 6px;
+  background-color: rgb(78, 78, 78);
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+.boton-crear-producto button:hover {
+  background-color: rgb(34, 34, 34);
+  transition: 0.5s;
+}

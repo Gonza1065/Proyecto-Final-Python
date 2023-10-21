@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/base.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/footer.css' %}"
+    />
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/signup.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/login.css' %}"
+    />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/inicio.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/gorras.css' %}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'proyectoApp/css/remeras.css' %}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'proyectoApp/css/pantalones.css' %}"
+  />
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'proyectoApp/css/acerca_de_mi.css' %}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'proyectoApp/css/crear_producto.css' %}"
+  />
+    <title>Tienda</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="navegacion">
+          <li>{% if user.is_authenticated %}¡Hola <strong>{{ user.username }}!</strong>{% endif %}</li>
+          <li>
+            <a href="{% url 'inicio' %}"><strong>Inicio</strong></a>
+          </li>
+          <li><a href="{% url 'gorras' %}">Gorras</a></li>
+          <li><a href="{% url 'remeras' %}">Remeras</a></li>
+          <li><a href="{% url 'pantalones' %}">Pantalones</a></li>
+          <li><a href="{% url 'crear_producto' %}">Publicar prenda</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li><a href="{% url 'acerca_de_mi' %}">Acerca de mi</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block login %} 
+      {% endblock %} 
+      {% block signup %} 
+      {% endblock %} 
+      {% block inicio %} 
+      {% endblock inicio %} 
+      {% block gorras %} 
+      {% endblock gorras %}
+      {% block ver_detalles_gorra %}
+      {% endblock ver_detalles_gorra %}
+      {% block remeras %}
+      {% endblock remeras %}
+      {% block ver_detalles_remera %}
+      {% endblock ver_detalles_remera %}
+      {% block pantalones %}
+      {% endblock pantalones %}
+      {% block ver_detalles_pantalon %}
+      {% endblock ver_detalles_pantalon %}
+      {% block crear_producto %}
+      {% endblock crear_producto %}
+      {% block mis_productos %}
+      {% endblock mis_productos %}
+      {% block actualizar_producto %}
+      {% endblock actualizar_producto %}
+      {% block confirmar_eliminar_producto %}
+      {% endblock confirmar_eliminar_producto %}
+      {% block acerca_de_mi %}
+      {% endblock acerca_de_mi %}
+    </main>
+    <footer>
+      <div class="derechos-reservados">
+        <p>&copy; {{ year }} Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

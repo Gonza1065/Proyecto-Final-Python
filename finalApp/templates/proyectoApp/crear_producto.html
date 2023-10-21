@@ -1,0 +1,17 @@
+{% extends "proyectoApp/base.html" %} {% load static %} {% block crear_producto %}
+<div class="titulo-crear-producto">
+<h1>Crear Producto</h1>
+</div>
+<div class="crear-producto">
+  <form method="post" enctype="multipart/form-data" class="formulario">
+    {% csrf_token %} {{ form.as_p }}
+    <div class="boton-crear-producto">
+    <button type="submit">Crear Producto</button>
+  </div>
+  </form>
+  <div class="ver-prendas-publicadas">
+      <a href="{% url 'mis_productos' %}">Ver mis prendas publicadas</a>
+      <a href="{% url 'inicio' %}">Volver al inicio</a>
+  </div>
+</div>
+{% endblock %}

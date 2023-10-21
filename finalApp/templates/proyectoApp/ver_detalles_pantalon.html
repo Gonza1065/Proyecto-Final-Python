@@ -1,0 +1,10 @@
+{% extends "proyectoApp/base.html" %}
+{% load static %}
+{% block ver_detalles_pantalon%}
+  <h1>Detalles de el pantalon: {{ pantalon.nombre }}</h1>
+  <div class="pantalon-details">
+    <img src="/media/{{ pantalon.imagen }} " alt="{{ pantalon.nombre }}" width="300">
+    <p><strong>Descripción:</strong> {{ pantalon.descripcion }}</p>
+  </div>
+  <a href="{% url 'pantalones' %}">Volver a la lista de pantalones</a>
+{% endblock %}
